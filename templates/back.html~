@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<head>
+	<title>home</title>
+</head>
+
+<body>
+	<center>
+		{{short_url}}<br>
+		copy and enjoy!!!<br>
+		<a href = "http://localhost/home.html">home</a>
+	</center>
+</body>

@@ -1,9 +1,15 @@
 from flask import Flask, render_template, request, redirect, url_for
 from model import *
-from urlparse import *
 import string
 import base64
 from math import floor
+
+
+
+try:
+    from urllib.parse import urlparse
+except ImportError:
+    from urlparse import urlparse
 
 host = 'http://localhost:5000/'
 short_url = ''
@@ -47,7 +53,7 @@ def home():
 def redirect_short_url(short_url):
 	x = str(short_url)
 	decoded = toBase10(x)
-	print decoded
+	print( decoded)
 	db.connect()
 	u = weburls.select().where(weburls.id == decoded).get()
 	ur = u.url
